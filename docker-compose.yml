@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    image: login
+    restart: unless-stopped
+    # env_file: ./.env
+    ports:
+      - 3000:3000
+    environment:
+      - DATABASE_HOST=mysql.czcbg28ubfu7.us-east-1.rds.amazonaws.com
+      - DATABASE_USER=admin
+      - DATABASE_PASSWORD=PU82dARWlZrJ8Oqp
+      - DATABASE=nodelogin
