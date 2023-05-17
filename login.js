@@ -1,10 +1,10 @@
-require('dotenv').config();
-
+const dotenv = require('dotenv');
 const mysql = require('mysql');
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
 
+dotenv.config();
 const connection = mysql.createConnection({
     host: process.env.DATABASE_HOST,
     user: process.env.DATABASE_USER,
